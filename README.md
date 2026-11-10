@@ -10,6 +10,7 @@
 [![MCP server](https://img.shields.io/badge/MCP-server-374151)](#any-ai-agent-can-shop-through-kart)
 [![Channel3](https://img.shields.io/badge/Products-Channel3-6E56CF)](#channel3-the-whole-market-checked-twice)
 [![AG Studio](https://img.shields.io/badge/Insights-AG%20Studio-1F6FEB)](#insights-ag-studio)
+[![Render](https://img.shields.io/badge/Hosted%20on-Render-111827?logo=render&logoColor=white)](#deploy-to-render)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![Postgres](https://img.shields.io/badge/Postgres-Neon-00A86B?logo=postgresql&logoColor=white)](#storage)
 
@@ -75,6 +76,14 @@ It works with Kart's own chat agent, and with the agent you already use: Claude 
   <tr>
     <td width="180" align="center"><b>Claude</b><br><sub>Anthropic</sub></td>
     <td><b>Claude</b> runs the shopping agent and checks damage photos, and Kart's MCP server lets any agent (Claude Desktop, ChatGPT, Cursor) shop under the same rules. <a href="#ai-in-kart">AI in Kart →</a></td>
+  </tr>
+  <tr>
+    <td width="180" align="center"><b>Render</b></td>
+    <td><b>Render</b> hosts the live demo: one web service built from <code>render.yaml</code>, with a health check on <code>/api/status</code>. <a href="#deploy-to-render">Deploy to Render →</a></td>
+  </tr>
+  <tr>
+    <td width="180" align="center"><b>Also used</b></td>
+    <td>Next.js 15, React 19, TypeScript and Tailwind CSS for the app; Neon Postgres for storage; Clerk for sign-in; the Model Context Protocol (MCP) for agent access.</td>
   </tr>
 </table>
 
@@ -326,7 +335,7 @@ docs/                      Pitch (Markdown and PDF) and README screenshots
 .github/workflows/ci.yml   Build check (runs where GitHub Actions is enabled)
 ```
 
-**Stack:** Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Claude (Anthropic SDK) · PayPal REST, JS SDK and Agent Toolkit · Channel3 · AG Studio · Postgres (Neon) · Clerk · Wedges · Lucide
+**Stack:** Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Claude (Anthropic SDK) · PayPal REST, JS SDK and Agent Toolkit · Channel3 · AG Studio · Postgres (Neon) · Render · Clerk · Wedges · Lucide
 
 ## Contributing
 

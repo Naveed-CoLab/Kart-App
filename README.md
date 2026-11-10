@@ -15,9 +15,19 @@
 
 **[Try it](#try-it)** · **[Pitch (PDF)](docs/Kart_Pitch.pdf)** · **[For judges](#for-judges-check-the-whole-flow)** · **[Security](SECURITY.md)**
 
-PayPal AI Hackathon 2026
-
 </div>
+
+<p align="center"><sub>Built for the PayPal AI Hackathon 2026 with</sub></p>
+
+<p align="center">
+  <a href="https://developer.paypal.com"><picture><source media="(prefers-color-scheme: dark)" srcset="public/brand/paypal-logo-white.png"><img src="public/brand/paypal-logo.png" alt="PayPal" height="32"></picture></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://trychannel3.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://trychannel3.com/logos/channel3/channel3-logo-wide-dark.svg"><img src="https://trychannel3.com/logos/channel3/channel3-logo-wide-light.svg" alt="Channel3" height="28"></picture></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.ag-grid.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ag-grid/ag-grid/latest/documentation/ag-grid-docs/public/images/ag-logos/svg-logos/AG-Grid-Logo_Dark-Theme.svg"><img src="https://raw.githubusercontent.com/ag-grid/ag-grid/latest/documentation/ag-grid-docs/public/images/ag-logos/svg-logos/AG-Grid-Logo_Light-Theme.svg" alt="AG Grid" height="40"></picture></a>
+</p>
+
+
 
 ---
 
@@ -31,6 +41,7 @@ It works with Kart's own chat agent, and with the agent you already use: Claude 
 
 ## Contents
 
+- [Built with](#built-with)
 - [Why Kart](#why-kart)
 - [Screenshots](#screenshots)
 - [How it works](#how-it-works)
@@ -45,6 +56,27 @@ It works with Kart's own chat agent, and with the agent you already use: Claude 
 - [Project structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Built with
+
+<table>
+  <tr>
+    <td width="180" align="center"><a href="https://developer.paypal.com"><picture><source media="(prefers-color-scheme: dark)" srcset="public/brand/paypal-logo-white.png"><img src="public/brand/paypal-logo.png" alt="PayPal" height="30"></picture></a></td>
+    <td><b>PayPal</b> moves every dollar: Orders v2 and the JS SDK for checkout in the chat, Vault for one-tap and auto-buy, Payouts and Refunds for the Kart Guarantee, Partner Referrals for stores, the Agent Toolkit for tracking, and verified webhooks. <a href="#paypal-is-the-core">How Kart uses PayPal →</a></td>
+  </tr>
+  <tr>
+    <td width="180" align="center"><a href="https://trychannel3.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://trychannel3.com/logos/channel3/channel3-logo-wide-dark.svg"><img src="https://trychannel3.com/logos/channel3/channel3-logo-wide-light.svg" alt="Channel3" height="24"></picture></a></td>
+    <td><b>Channel3</b> gives agents the whole market: every store selling the exact product, the cheapest one in stock, a live price check right before PayPal charges, and search by photo. <a href="#channel3-the-whole-market-checked-twice">How Kart uses Channel3 →</a></td>
+  </tr>
+  <tr>
+    <td width="180" align="center"><a href="https://www.ag-grid.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ag-grid/ag-grid/latest/documentation/ag-grid-docs/public/images/ag-logos/svg-logos/AG-Grid-Logo_Dark-Theme.svg"><img src="https://raw.githubusercontent.com/ag-grid/ag-grid/latest/documentation/ag-grid-docs/public/images/ag-logos/svg-logos/AG-Grid-Logo_Light-Theme.svg" alt="AG Grid" height="36"></picture></a></td>
+    <td><b>AG Studio</b> (AG Grid) powers Insights: what every agent bought, what Kart stopped, what you saved, a custom guardrail widget, and Ask Kart AI on the Studio Agent Framework. <a href="#insights-ag-studio">How Kart uses AG Studio →</a></td>
+  </tr>
+  <tr>
+    <td width="180" align="center"><b>Claude</b><br><sub>Anthropic</sub></td>
+    <td><b>Claude</b> runs the shopping agent and checks damage photos, and Kart's MCP server lets any agent (Claude Desktop, ChatGPT, Cursor) shop under the same rules. <a href="#ai-in-kart">AI in Kart →</a></td>
+  </tr>
+</table>
 
 ## Why Kart
 
@@ -294,7 +326,7 @@ docs/                      Pitch (Markdown and PDF) and README screenshots
 .github/workflows/ci.yml   Build check (runs where GitHub Actions is enabled)
 ```
 
-**Built with:** Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Claude (Anthropic SDK) · PayPal REST, JS SDK and Agent Toolkit · Channel3 · AG Studio · Postgres (Neon) · Clerk · Wedges · Lucide
+**Stack:** Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Claude (Anthropic SDK) · PayPal REST, JS SDK and Agent Toolkit · Channel3 · AG Studio · Postgres (Neon) · Clerk · Wedges · Lucide
 
 ## Contributing
 
@@ -308,5 +340,6 @@ Third-party parts keep their own terms:
 
 - **Dependencies** (Next.js, React, the Anthropic SDK, the PayPal SDKs and Agent Toolkit, Clerk, `pg` and others) are installed from npm under their own licenses.
 - **AG Studio / AG Grid:** `ag-grid-community` is MIT. `ag-studio` is a commercial AG Grid product; it runs with a trial watermark unless you set your own `AG_STUDIO_LICENSE_KEY`.
+- **Company logos:** the PayPal logos in `public/brand/` and the Channel3 and AG Grid logos (loaded from their official sites) belong to their owners and are used only to credit the services Kart is built on. They are not covered by the MIT License.
 - **PayPal brand assets** in `public/brand/` belong to PayPal and are used under PayPal's brand guidelines. They are not covered by the MIT License.
 - **Channel3, Claude and PayPal APIs** are used under their providers' terms. Bring your own keys (see `.env.example`).

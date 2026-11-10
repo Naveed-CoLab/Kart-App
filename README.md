@@ -4,7 +4,6 @@
 
 <br>
 
-[![CI](https://github.com/Naveed-CoLab/Kart-App/actions/workflows/ci.yml/badge.svg)](https://github.com/Naveed-CoLab/Kart-App/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B5ED7.svg)](LICENSE)
 [![PayPal Sandbox](https://img.shields.io/badge/PayPal-Sandbox-003087?logo=paypal&logoColor=white)](#paypal-is-the-core)
 [![Claude](https://img.shields.io/badge/Agent-Claude-191919?logo=anthropic&logoColor=white)](#ai-in-kart)
@@ -292,7 +291,7 @@ lib/
   db.ts  pg.ts  files.ts   Storage (Postgres or local files)
   trace.ts                 Live trace built from real events
 docs/                      Pitch (Markdown and PDF) and README screenshots
-.github/workflows/ci.yml   Lint, typecheck and build on every push
+.github/workflows/ci.yml   Build check (runs where GitHub Actions is enabled)
 ```
 
 **Built with:** Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Claude (Anthropic SDK) · PayPal REST, JS SDK and Agent Toolkit · Channel3 · AG Studio · Postgres (Neon) · Clerk · Wedges · Lucide

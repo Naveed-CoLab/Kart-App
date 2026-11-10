@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: kart
+    runtime: node
+    plan: free
+    buildCommand: npm ci --legacy-peer-deps && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/status
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-sonnet-5-5
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: PAYPAL_BASE_URL
+        value: https://api-m.sandbox.paypal.com
+      - key: STORE_PAYPAL_EMAIL
+        sync: false
+      - key: PAYPAL_WEBHOOK_ID
+        sync: false
+      - key: CHANNEL3_API_KEY
+        sync: false
+      - key: APPROVAL_SECRET
+        generateValue: true
+      - key: KART_FEE_RATE
+        value: "0.05"
+      - key: APP_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: SHOPPER_PAYPAL_EMAIL
+        sync: false
+      - key: STORE_CHECKOUT
+        value: demo
+      - key: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: AG_STUDIO_LICENSE_KEY
+        sync: false

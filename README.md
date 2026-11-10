@@ -5,14 +5,14 @@
 <br>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B5ED7.svg)](LICENSE)
-[![PayPal Sandbox](https://img.shields.io/badge/PayPal-Sandbox-003087?logo=paypal&logoColor=white)](#paypal-is-the-core)
-[![Claude](https://img.shields.io/badge/Agent-Claude-191919?logo=anthropic&logoColor=white)](#ai-in-kart)
-[![MCP server](https://img.shields.io/badge/MCP-server-374151)](#any-ai-agent-can-shop-through-kart)
-[![Channel3](https://img.shields.io/badge/Products-Channel3-6E56CF)](#channel3-the-whole-market-checked-twice)
-[![AG Studio](https://img.shields.io/badge/Insights-AG%20Studio-1F6FEB)](#insights-ag-studio)
-[![Render](https://img.shields.io/badge/Hosted%20on-Render-111827?logo=render&logoColor=white)](#deploy-to-render)
+[![PayPal Sandbox](https://img.shields.io/badge/PayPal-Sandbox-002991?logo=paypal&logoColor=white)](#paypal-is-the-core)
+[![Claude](https://img.shields.io/badge/Agent-Claude-D97757?logo=claude&logoColor=white)](#ai-in-kart)
+[![MCP server](https://img.shields.io/badge/MCP-server-000000?logo=modelcontextprotocol&logoColor=white)](#any-ai-agent-can-shop-through-kart)
+[![Channel3](https://img.shields.io/badge/Products-Channel3-111111)](#channel3-the-whole-market-checked-twice)
+[![AG Studio](https://img.shields.io/badge/Insights-AG%20Studio-003264)](#insights-ag-studio)
+[![Render](https://img.shields.io/badge/Hosted%20on-Render-000000?logo=render&logoColor=white)](#deploy-to-render)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
-[![Postgres](https://img.shields.io/badge/Postgres-Neon-00A86B?logo=postgresql&logoColor=white)](#storage)
+[![Postgres](https://img.shields.io/badge/Postgres-Neon-34D59A?logo=postgresql&logoColor=white)](#storage)
 
 **[Live demo](https://kart-app-cmez.onrender.com)** · **[Pitch (PDF)](docs/Kart_Pitch.pdf)** · **[For judges](#for-judges-check-the-whole-flow)** · **[Security](SECURITY.md)**
 
@@ -74,11 +74,11 @@ It works with Kart's own chat agent, and with the agent you already use: Claude 
     <td><b>AG Studio</b> (AG Grid) powers Insights: what every agent bought, what Kart stopped, what you saved, a custom guardrail widget, and Ask Kart AI on the Studio Agent Framework. <a href="#insights-ag-studio">How Kart uses AG Studio →</a></td>
   </tr>
   <tr>
-    <td width="180" align="center"><b>Claude</b><br><sub>Anthropic</sub></td>
+    <td width="180" align="center"><a href="https://www.anthropic.com/claude"><img src="docs/images/logos/claude.svg" alt="Claude" height="30"></a><br><b>Claude</b></td>
     <td><b>Claude</b> runs the shopping agent and checks damage photos, and Kart's MCP server lets any agent (Claude Desktop, ChatGPT, Cursor) shop under the same rules. <a href="#ai-in-kart">AI in Kart →</a></td>
   </tr>
   <tr>
-    <td width="180" align="center"><b>Render</b></td>
+    <td width="180" align="center"><a href="https://render.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/logos/render-dark.svg"><img src="docs/images/logos/render-light.svg" alt="Render" height="28"></picture></a><br><b>Render</b></td>
     <td><b>Render</b> hosts the live demo: one web service built from <code>render.yaml</code>, with a health check on <code>/api/status</code>. <a href="#deploy-to-render">Deploy to Render →</a></td>
   </tr>
   <tr>
@@ -351,6 +351,6 @@ Third-party parts keep their own terms:
 
 - **Dependencies** (Next.js, React, the Anthropic SDK, the PayPal SDKs and Agent Toolkit, Clerk, `pg` and others) are installed from npm under their own licenses.
 - **AG Studio / AG Grid:** `ag-grid-community` is MIT. `ag-studio` is a commercial AG Grid product; it runs with a trial watermark unless you set your own `AG_STUDIO_LICENSE_KEY`.
-- **Company logos:** the PayPal logos in `public/brand/` and the Channel3 and AG Grid logos in `docs/images/logos/` (official files from their sites) belong to their owners and are used only to credit the services Kart is built on. They are not covered by the MIT License.
+- **Company logos:** the PayPal logos in `public/brand/` and the Channel3, AG Grid, Claude and Render logos in `docs/images/logos/` belong to their owners and are used only to credit the services Kart is built on. They are not covered by the MIT License.
 - **PayPal brand assets** in `public/brand/` belong to PayPal and are used under PayPal's brand guidelines. They are not covered by the MIT License.
 - **Channel3, Claude and PayPal APIs** are used under their providers' terms. Bring your own keys (see `.env.example`).

@@ -101,6 +101,8 @@ AI agents can already browse, compare and check out. People still won't let them
 
 ## Screenshots
 
+These screenshots show a demo account with sample orders. The product pictures in them are illustrations; the live app shows each store's real product photos from Channel3.
+
 <table>
   <tr>
     <td width="50%" valign="top">

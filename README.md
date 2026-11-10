@@ -4,6 +4,7 @@
 
 <br>
 
+[![CI](https://github.com/Naveed-CoLab/Kart-App/actions/workflows/ci.yml/badge.svg)](https://github.com/Naveed-CoLab/Kart-App/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B5ED7.svg)](LICENSE)
 [![PayPal Sandbox](https://img.shields.io/badge/PayPal-Sandbox-003087?logo=paypal&logoColor=white)](#paypal-is-the-core)
 [![Claude](https://img.shields.io/badge/Agent-Claude-191919?logo=anthropic&logoColor=white)](#ai-in-kart)
@@ -13,7 +14,7 @@
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![Postgres](https://img.shields.io/badge/Postgres-Neon-00A86B?logo=postgresql&logoColor=white)](#storage)
 
-**[Live demo](#try-it)** · **[Demo video](#demo-video)** · **[Pitch (PDF)](Kart_Pitch.pdf)** · **[For judges](#for-judges-check-the-whole-flow)**
+**[Try it](#try-it)** · **[Pitch (PDF)](docs/Kart_Pitch.pdf)** · **[For judges](#for-judges-check-the-whole-flow)** · **[Security](SECURITY.md)**
 
 PayPal AI Hackathon 2026
 
@@ -43,6 +44,7 @@ It works with Kart's own chat agent, and with the agent you already use: Claude 
 - [Getting started](#getting-started)
 - [For judges: check the whole flow](#for-judges-check-the-whole-flow)
 - [Project structure](#project-structure)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Why Kart
@@ -93,10 +95,6 @@ AI agents can already browse, compare and check out. People still won't let them
     </td>
   </tr>
 </table>
-
-### Demo video
-
-> Add your YouTube link here before submitting: `https://youtu.be/…`
 
 ## How it works
 
@@ -257,21 +255,18 @@ With `DATABASE_URL`, everything (orders, chats, rules, agent keys, photos) is st
 
 ### Try it
 
-> Live demo: add your Render URL here before submitting.
+The hosted demo and the 3-minute video are linked from the Devpost submission. To run Kart yourself, see [Getting started](#getting-started); it takes a few minutes.
 
 Everything runs on the **PayPal sandbox**; no real money moves.
 
 1. **Shopper:** open the app → **Try the demo without an account**. Ask *"Buy me running socks under $20"* and watch the trace. Ask for something around $45 to see the approval card, and for $90 shoes to see the block.
-2. **Pay:** the first payment opens PayPal: log in with the sandbox shopper below and keep "Save PayPal for one-tap" on. After that, **Confirm & pay** charges with no popup.
+2. **Pay:** the first payment opens PayPal: log in with the sandbox shopper account and keep "Save PayPal for one-tap" on. After that, **Confirm & pay** charges with no popup.
 3. **Any agent:** **Connected agents** → create a key → paste the config into Claude Desktop.
 4. **Store:** sidebar → **Switch to the store side** → **Open the demo store**. Mark an order shipped with a tracking number.
 5. **Guarantee:** in the chat, attach a photo and say the item arrived damaged.
 6. **PayPal:** log in at sandbox.paypal.com to see each payment, payout and refund.
 
-Sandbox logins for judges:
-
-- Shopper (Personal): `sb-…@personal.example.com` / `…`
-- Store (Business): `sb-…@business.example.com` / `…`
+**Sandbox logins:** judges will find the sandbox shopper and store logins in the Devpost submission's testing instructions. They aren't published here, so the demo accounts stay usable. Running your own copy? Create your own sandbox accounts (see [PayPal sandbox setup](#paypal-sandbox-setup-one-time)).
 
 ### Scope today
 
@@ -296,10 +291,15 @@ lib/
   channel3.ts              Product search, offers, live checks
   db.ts  pg.ts  files.ts   Storage (Postgres or local files)
   trace.ts                 Live trace built from real events
-docs/images/               README screenshots
+docs/                      Pitch (Markdown and PDF) and README screenshots
+.github/workflows/ci.yml   Lint, typecheck and build on every push
 ```
 
 **Built with:** Next.js 15 · React 19 · TypeScript · Tailwind CSS v4 · Claude (Anthropic SDK) · PayPal REST, JS SDK and Agent Toolkit · Channel3 · AG Studio · Postgres (Neon) · Clerk · Wedges · Lucide
+
+## Contributing
+
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md), and report security problems privately as described in [SECURITY.md](SECURITY.md).
 
 ## License
 

@@ -43,3 +43,6 @@ next-env.d.ts
 
 # Kart local data
 .data/
+
+# internal prep notes
+VIDEO_SCRIPT.md

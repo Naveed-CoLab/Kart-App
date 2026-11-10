@@ -145,7 +145,6 @@ Kart moves real money in the PayPal sandbox, so it is built like a payments app,
 
 **Hackathon themes Kart covers:** AI Agents & Automation (an agent that shops and pays within rules, and an MCP server for other agents), Money Movement (Orders, Vault, Payouts, Refunds), Consumer (spending protection and a refund-first guarantee) and Business Solutions (paid, verified orders for stores).
 
-Target prizes: Grand Prize (or Best Use of Agentic Commerce), plus one sponsor prize: Best Use of AG Grid or Best Use of Channel3. (A project can win one Grand Prize or Honorable Mention plus one sponsor prize.)
 
 ## 8b. Sponsor fit
 
@@ -154,23 +153,7 @@ Target prizes: Grand Prize (or Best Use of Agentic Commerce), plus one sponsor p
 | **Channel3** | `/v1/search` (agentic mode), `/v1/products/{id}` live re-check, `/v1/image-search`, every store's offer, `x-user-id` attribution, commission rates | It's how Kart finds the right price and makes sure an agent never pays a stale one. |
 | **AG Grid (AG Studio)** | AG Studio dashboard (KPIs, charts, grids), a custom "Kart guardrail" widget, Kart theme, saved layouts, AI on the Studio Agent Framework with a custom Kart agent delegating to Studio's built-in agents, running on Claude via a custom adapter | Oversight is part of Kart's promise: shoppers need to see what their agents did with their money, and ask about it. |
 
-## 9. Demo script (about 2:50)
-
-| Time | On screen | Voice-over |
-|---|---|---|
-| 0:00 | Title and the problem | "Agents can buy things now. Would you give one your wallet?" |
-| 0:12 | Home: the Rule Lane, green / amber / red, with this month's purchases as pins | "With Kart, you set the rules once. Green, Kart pays. Amber, it asks you. Red, never." |
-| 0:27 | Kart chat: "buy me socks under $20", the trace runs step by step, then "Bought" | "Watch it work: it searches every store, re-checks the live price, checks your rules, and pays the store with your PayPal." |
-| 0:55 | Claude Desktop asks Kart for socks, earbuds and shoes | "And it works with the agent you already use. Here Claude Desktop shops through Kart." |
-| 1:20 | Bought / approval card with an amber pin / "Stopped by your rules" with a red pin and "No money moved" | "Same rules, every agent. $89 is over your max: blocked, and no money moves." |
-| 1:40 | Connected agents: permissions, budget bar, expiry, disconnect | "Each agent gets a smaller box: its own budget, and it can't pay on its own until you allow it." |
-| 1:55 | Store dashboard: ship, add tracking | "The store sees a paid order and adds tracking, which lands on the PayPal payment." |
-| 2:10 | Damaged-item claim, Claude checks the photo, money paid back | "If something goes wrong, the Kart Guarantee pays you back first through PayPal." |
-| 2:25 | Insights (AG Studio): ask "Which agent spends most?" | "And you can see everything your agents did, and ask about it." |
-| 2:37 | PayPal sandbox accounts with the transactions | "All real PayPal sandbox transactions." |
-| 2:45 | Tagline | "Kart: the trust layer for AI agents that spend money." |
-
-## 10. Scope today, and what's next
+## 9. Scope today, and what's next
 
 **Today:** Kart pays stores through PayPal (the store as payee, or Kart's sandbox merchant paying the store with Payouts), and the store fulfils from its dashboard. Channel3 provides the products, every store's price and live re-checks; its checkout API is announced but not yet available, so Kart doesn't place orders inside other stores' websites.
 
@@ -188,4 +171,4 @@ Target prizes: Grand Prize (or Best Use of Agentic Commerce), plus one sponsor p
 2. Shop in the chat, or go to **Connected agents** and connect Claude Desktop.
 3. Choose **Switch to the store side**, then **Open the demo store**, to see the same orders as the store.
 
-The README has the PayPal sandbox logins and the full judge walkthrough.
+The [README](../README.md) has the full judge walkthrough.

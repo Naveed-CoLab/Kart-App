@@ -5,6 +5,7 @@
   "license": "MIT",
   "description": "Kart: the trust layer for AI agents that spend money. PayPal + Claude + Channel3.",
   "repository": "github:Naveed-CoLab/Kart-App",
+  "homepage": "https://kart-app-cmez.onrender.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

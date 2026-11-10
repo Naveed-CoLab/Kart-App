@@ -14,7 +14,7 @@
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![Postgres](https://img.shields.io/badge/Postgres-Neon-00A86B?logo=postgresql&logoColor=white)](#storage)
 
-**[Try it](#try-it)** · **[Pitch (PDF)](docs/Kart_Pitch.pdf)** · **[For judges](#for-judges-check-the-whole-flow)** · **[Security](SECURITY.md)**
+**[Live demo](https://kart-app-cmez.onrender.com)** · **[Pitch (PDF)](docs/Kart_Pitch.pdf)** · **[For judges](#for-judges-check-the-whole-flow)** · **[Security](SECURITY.md)**
 
 </div>
 
@@ -295,11 +295,13 @@ With `DATABASE_URL`, everything (orders, chats, rules, agent keys, photos) is st
 
 ### Try it
 
-The hosted demo and the 3-minute video are linked from the Devpost submission. To run Kart yourself, see [Getting started](#getting-started); it takes a few minutes.
+**Live demo: [kart-app-cmez.onrender.com](https://kart-app-cmez.onrender.com)**
+
+The demo runs on Render's free plan, so the first visit can take up to a minute to wake up. To run Kart yourself, see [Getting started](#getting-started).
 
 Everything runs on the **PayPal sandbox**; no real money moves.
 
-1. **Shopper:** open the app → **Try the demo without an account**. Ask *"Buy me running socks under $20"* and watch the trace. Ask for something around $45 to see the approval card, and for $90 shoes to see the block.
+1. **Shopper:** open the [live demo](https://kart-app-cmez.onrender.com) → **Try the demo without an account**. Ask *"Buy me running socks under $20"* and watch the trace. Ask for something around $45 to see the approval card, and for $90 shoes to see the block.
 2. **Pay:** the first payment opens PayPal: log in with the sandbox shopper account and keep "Save PayPal for one-tap" on. After that, **Confirm & pay** charges with no popup.
 3. **Any agent:** **Connected agents** → create a key → paste the config into Claude Desktop.
 4. **Store:** sidebar → **Switch to the store side** → **Open the demo store**. Mark an order shipped with a tracking number.

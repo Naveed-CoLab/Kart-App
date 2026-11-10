@@ -37,3 +37,12 @@ export function sameOrigin(req: Request) {
 export async function asUser<T>(fn: () => Promise<T> | T): Promise<T> {
   return asTenant(tenantOf(await getSession()), fn);
 }
+
+/**
+ * Redirect to a path on this same site. The Location header is relative on purpose: behind a
+ * host's proxy (Render, etc.) the server sees its internal address (localhost:10000) in req.url,
+ * so an absolute redirect built from it would send the browser to localhost.
+ */
+export function redirectTo(path: string) {
+  return new NextResponse(null, { status: 307, headers: { Location: path } });
+}

@@ -249,7 +249,7 @@ Kart moves money, so it's built like a payments app:
 
 ## Getting started
 
-Requires Node 20+.
+Requires Node 22.
 
 ```bash
 git clone https://github.com/Naveed-CoLab/Kart-App.git

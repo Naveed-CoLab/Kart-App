@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { redirectTo } from "@/lib/http";
 import { getSession } from "@/lib/session";
 import { setStorePayPal, storeByTracking } from "@/lib/stores";
 
@@ -11,7 +11,7 @@ export async function GET(req: Request) {
   const tracking = url.searchParams.get("merchantId");
   const s = await getSession();
   const rec = tracking ? storeByTracking(tracking) : null;
-  if (!merchantId || !rec || !s?.uid || rec.ownerUid !== s.uid) return NextResponse.redirect(new URL("/store/connect?paypal=failed", url));
+  if (!merchantId || !rec || !s?.uid || rec.ownerUid !== s.uid) return redirectTo("/store/connect?paypal=failed");
   setStorePayPal(s.uid, rec.domain, { merchantId });
-  return NextResponse.redirect(new URL(`/store/connect?paypal=connected&domain=${encodeURIComponent(rec.domain)}`, url));
+  return redirectTo(`/store/connect?paypal=connected&domain=${encodeURIComponent(rec.domain)}`);
 }

@@ -464,3 +464,14 @@ export async function approveClaim(orderId: string) {
   updateOrder(orderId, { status: o.deliveredAt ? "delivered" : "paid" });
   return guaranteeCredit(orderId, { kind: "claim", reason: "Claim approved after review." });
 }
+
+/** Store declines a claim that was in review: no money moves, and the shopper is told why. */
+export async function declineClaim(orderId: string, note?: string) {
+  const o = getOrder(orderId);
+  if (!o || o.status !== "claim_review") throw new KartError("No claim in review");
+  const why = String(note || "").replace(/[\u0000-\u001f<>]/g, "").trim().slice(0, 200) || "The photo didn't show damage to this product.";
+  const updated = updateOrder(orderId, { status: o.deliveredAt ? "delivered" : o.shippedAt ? "shipped" : "paid" });
+  logEvent({ type: "claim", orderId, amount: 0, rule: "Claim declined", reason: `${o.store} declined the claim: ${why}` });
+  pushChatItem(o.chatId, { id: uid("ui_"), kind: "notice", tone: "warning", title: "Claim not approved", text: `${o.store} reviewed your claim for ${o.title} and didn't approve it: ${why} Reply here with a clearer photo if you'd like it checked again.`, orderId });
+  return { order: updated };
+}
